@@ -55,7 +55,7 @@ def main():
 
         code = st.text_input("После авторизации вставьте код из Dropbox:")
 
-        if st.button("Получить токен"):
+        if st.button("Отправить код доступа"):
             try:
                 oauth_result = auth_flow.finish(code.strip())
                 st.session_state.access_token = oauth_result.access_token
