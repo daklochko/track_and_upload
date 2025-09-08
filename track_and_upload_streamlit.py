@@ -67,7 +67,6 @@ def main():
         dbx = dropbox.Dropbox(st.session_state.access_token)
         try:
             account = dbx.users_get_current_account()
-            st.write(f"Привет, {account.name.display_name}!")
         except Exception as e:
             st.error(f"Ошибка при получении информации о пользователе: {e}")
 
